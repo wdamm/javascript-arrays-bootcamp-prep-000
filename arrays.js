@@ -36,7 +36,7 @@ var tomotoSauceIngredients = [
     
     function addElementToBeginningOfArray(array,element) { 
 
-      [element,...array];
+   array =   [element,...array];
       return(array) ;
     }
     
@@ -46,7 +46,7 @@ var tomotoSauceIngredients = [
     }
     
     function addElementToEndOfArray(array,element) {
-      [...array,element]
+   array =   [...array,element]
       return(array)
     }
     
@@ -64,10 +64,23 @@ var tomotoSauceIngredients = [
       return(array)
     }
     
-    function removeElementFromBeginningOfArray(array) {
-      array.slice(1)
+    function destructivelyRemoveElementFromEndOfArray(array) {
+      array.pop()
       return(array)
     }
+    
+    function removeElementFromBeginningOfArray(array) {
+    array =  array.slice(1)
+      return(array)
+    }
+    
+  function removeElementFromEndOfArray(array) {
+
+array = array.slice(0,2)
+   return(array)
+  }
+    
+    
     
     
     
